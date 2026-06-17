@@ -1,0 +1,13 @@
+export class Homepage
+{
+  constructor(page){
+    this.page=page
+    this.regsterationclick=page.locator("//a[normalize-space()='Register']")
+  }
+  async goTo(){
+    await this.page.goto('https://parabank.parasoft.com/parabank/index.htm')
+  }
+  async regsterationclicklink(){
+    await this.regsterationclick.click()
+  }
+}
